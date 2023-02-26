@@ -9,29 +9,28 @@ describe('#guess', () => {
         game.setRange(0, 4048)
 
         let result = game.guess();
-        game.lower();
+        game.lower();//2024
         result = game.guess();
-        game.lower();
+        game.lower();//1012
         result = game.guess();
-        game.lower();
+        game.lower();//506
         result = game.guess();
-        game.greater();
+        game.greater();//253 506//759
         result = game.guess();
-        game.greater();
+        game.greater();//379 506
         result = game.guess();
-        game.lower();
+        game.lower();//379 442
         result = game.guess();
-        game.lower();
+        game.lower();//379 410
         result = game.guess();
-        game.greater();
+        game.greater(); //394 410
         result = game.guess();
-        game.greater();
+        game.greater();//402 410
         result = game.guess();
-        game.greater();
+        game.greater();//406 410
         result = game.guess();
-        game.lower();
+        game.lower();//408 406
         result = game.guess();
-
         expect(result).to.equal(number);
     });
 
